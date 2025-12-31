@@ -11,11 +11,12 @@ let hasUserInteracted = false;
 
 // CONFIGURATION
 const CONFIG = {
-    targetDate: new Date(new Date().getTime() + (1 * 06 * 1000)), // 1 minute from now
+    targetDate: new Date('2026-01-01T00:00:00+05:30'), // Jan 1, 2026 12:00:00 AM IST
     floatingElements: ['💖', '🌟', '💝', '✨'],
     floatingCount: 8,
     typingText: 'Happy Birthday My Love 💕'
 };
+
 
 // PARTICLES INITIALIZATION
 function createParticles(containerId) {
