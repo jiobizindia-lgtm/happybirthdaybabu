@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Something Special For You ❤️</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Initial Gate Screen -->
+    <div id="gateScreen" class="gate-screen" role="main" aria-label="Welcome screen">
+        <div class="gate-content">
+            <div class="gate-text">
+                <h1 class="gate-title">🎁 Something Special For You <br>I hope you enjoy it. .</h1>
+        
+                <p class="gate-subtitle">Click the button and feel my love ❤️</p>
+            </div>
+            <button id="clickHereBtn" class="btn-click-here" aria-label="Click to begin">
+                Click Here Baby 💖
+            </button>
+        </div>
+        <div class="particles-container" id="particlesContainer"></div>
+    </div>
+
+    <!-- Countdown Gate View -->
+    <div id="countdownScreen" class="countdown-screen hidden" role="region" aria-label="Countdown view" aria-live="polite">
+        <div class="countdown-container">
+            <h2 class="countdown-title">Counting Every Moment ⏳</h2>
+            <div class="countdown-card">
+                <div class="countdown-display" id="countdownDisplay">
+                    <span class="countdown-digit" id="days">00</span>
+                    <span class="countdown-separator">:</span>
+                    <span class="countdown-digit" id="hours">00</span>
+                    <span class="countdown-separator">:</span>
+                    <span class="countdown-digit" id="minutes">00</span>
+                    <span class="countdown-separator">:</span>
+                    <span class="countdown-digit" id="seconds">00</span>
+                </div>
+                <div class="countdown-labels">
+                    <div class="label">Days</div>
+                    <div class="label">Hours</div>
+                    <div class="label">Minutes</div>
+                    <div class="label">Seconds</div>
+                </div>
+            </div>
+            <div class="particles-container" id="countdownParticles"></div>
+        </div>
+    </div>
+
+    <!-- Fireworks Canvas -->
+    <canvas id="fireworksCanvas" class="fireworks-canvas hidden" width="1920" height="1080"></canvas>
+
+    <!-- Main Content (Initially Hidden) -->
+    <div id="mainContent" class="main-content hidden">
+        <!-- Profile Photo Section -->
+        <section id="photoSection" class="photo-section" aria-label="Profile photo">
+            <img id="profilePhoto" src="assets/images/profile.jpg" alt="Profile" class="profile-photo">
+        </section>
+
+        <!-- Typing Animation Section -->
+        <section id="typingSection" class="typing-section" aria-label="Birthday greeting">
+            <div class="typing-container">
+                <h2 id="typingText" class="typing-text"></h2>
+                <span class="cursor" id="cursor"></span>
+            </div>
+        </section>
+
+        <!-- Interactive Floating Elements -->
+        <div id="floatingElements" class="floating-elements" aria-label="Interactive elements">
+            <!-- Generated dynamically -->
+        </div>
+
+        <!-- Video Section -->
+        <section id="video-section" class="container-fluid px-0 my-5">
+            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-lg">
+                <video id="loveVideo" controls preload="metadata" playsinline class="w-100 h-100">
+                    <source src="assets/vidios/tu hai.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <!-- Message from My Heart -->
+        <section id="heartMessage" class="content-section" aria-label="Message from my heart">
+            <div class="container">
+                <h2 class="section-title">Message from My Heart 💝</h2>
+                <div class="heart-list">
+                    <div class="heart-item accent-red">
+                        <div class="heart-number">01</div>
+                        <div class="heart-text">
+                            <h3>Every Moment</h3>
+                            <p>Pta hai starting se hi jab se tu mere saath hai Every Moment mere liye bahut hi special tha. Beech mai bahut sari dikkate aayi tune mujhe kabhi nhi bhulaya aur na mujhe ignore kiya kabhi. Thank You So Much For Giving Me Another Chance.</p>
+                        </div>
+                    </div>
+                    <div class="heart-item accent-teal">
+                        <div class="heart-number">02</div>
+                        <div class="heart-text">
+                            <h3>Your Smile</h3>
+                            <p>Pta hai teri smile yaar sach mai bahut pyari hai off mood ko bhi on kar deti hai. tu yaar hamesha hasti mushkurati rahe i pray to god. Tujhse teri smile kabhi bhi door na ho.</p>
+                        </div>
+                    </div>
+                    <div class="heart-item accent-brown">
+                        <div class="heart-number">03</div>
+                        <div class="heart-text">
+                            <h3>Your Love</h3>
+                            <p>Your love is the greatest gift I could ever receive, today and always.
+                                it is not just a line it's true. Pta hai itna bura thaga gya hu mai koi chance nhi tha sabhlne ka ho sakta tha ki mai kuch galat activity karna start kar deta but tune mujhe sabhal liya. kaise tera sukriyaa adda karu 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery -->
+        <section id="photoGallery" class="content-section" aria-label="Photo gallery">
+            <div class="container">
+                <h2 class="section-title">My favorite Person & Stories related with them 📸</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            <img src="assets/images/Girl-1.jpg" alt="A Moment We'll Never Forget">
+                        </div>
+                        <p class="gallery-caption">I Love Your Look</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            <img src="assets/images/Girl-2.jpg" alt="A Moment We'll Never Forget">
+                        </div>
+                        <p class="gallery-caption">A vision of beauty</p>
+                    </div><div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            <img src="assets/images/Girl-3.jpg" alt="A Moment We'll Never Forget">
+                        </div>
+                        <p class="gallery-caption">That white shirt should come with a warning😀</p>
+                    </div><div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            <img src="assets/images/Girl-4.jpg" alt="A Moment We'll Never Forget">
+                        </div>
+                        <p class="gallery-caption">After seeing this picture my heart start heavy pumping❤️</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            <img src="assets/images/Girl-5.jpg" alt="A Moment We'll Never Forget">
+                        </div>
+                        <p class="gallery-caption">Simplicity How i explain this. "Unmatched beauty"</p>
+                    
+                    </div>
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            <img src="assets/images/Girl-6.jpg" alt="A Moment We'll Never Forget">
+                        </div>
+                        <p class="gallery-caption">That bold look hits differently… it’s confidence mixed with something I can’t stop feeling."</p>
+                    
+                    </div>
+
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Why You Are Special -->
+        <section id="whySpecial" class="content-section" aria-label="Why you are special">
+            <div class="container">
+                <h2 class="section-title">Why You Are Special ✨</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="special-card">
+                            <div class="special-icon">💫</div>
+                            <h3>Your Spirit</h3>
+                            <p>Tumhari spirit ek soft si roshni jaisi hai, jo bina shor ke chupchaap mere dil ko poori tarah roshan kar deti hai.
+Tum paas hote ho toh samay apni speed bda deta hai pr jitna bhi tumse milta hu, bs bhi ruk jane ka man karta hai.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="special-card">
+                            <div class="special-icon">💎</div>
+                            <h3>Your Kindness</h3>
+                            <p>Tumhari kindness ek aisi warmth hai jo bina kuch kahe sab kuch theek kar deti hai.
+Jaise tumhara dil har kisi ke liye jagah rakhta ho, aur mujhe har baar yeh ehsaas dilaata ho ki achha hona abhi bhi duniya mein zinda hai.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="special-card">
+                            <div class="special-icon">🌹</div>
+                            <h3>Your Beauty</h3>
+                            <p>Tumhari beauty sirf chehre tak simit nahi hai, woh tumhari muskaan, tumhari baaton aur tumhari simplicity mein basii hui hai.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="special-card">
+                            <div class="special-icon">💝</div>
+                            <h3>Your Love</h3>
+                            <p>Tumhara pyaar ek sukoon jaisa hai, jo bina kisi shart ke mujhe apna leta hai, chahe mai jaisa bhi kyu na hu.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gift Explanation -->
+        <section id="giftExplanation" class="content-section">
+            <div class="container gift-wrap">
+                <h2 class="gift-title">A Gift From My Heart <span>🎁</span></h2>
+                <div class="gift-lines">
+                    <div class="gift-line">
+                        <span></span>
+                        <p>This website is a labor of love, created just for you. I dont know you like my idea or not but trust i want to feel you special.</p>
+                        <span></span>
+                    </div>
+                    <div class="gift-line">
+                        <span></span>
+                        <p>Every animation, every sound, every detail was crafted with care.</p>
+                        <span></span>
+                    </div>
+                    <div class="gift-line highlight">
+                        <span></span>
+                        <p>To remind you how deeply and completely i Loved you.</p>
+                        <span></span>
+                    </div>
+                    <div class="gift-line">
+                        <span></span>
+                        <p>You are my greatest blessing, my favorite person, my forever.</p>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="video-section" class="container-fluid px-0 my-5">
+            <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-lg">
+                <video id="loveVideo" controls preload="metadata" playsinline class="w-100 h-100">
+                    <source src="assets/vidios/tere_liye.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <!-- Promise & Future Message -->
+        <section id="futureMessage" class="content-section final-section" aria-label="Promise for the future">
+            <div class="container">
+                <h2 class="section-title">Forever With You 🌟</h2>
+                <div class="promise-content">
+                    <p>With every passing day, my love for you grows stronger.</p>
+                    <p>I promise to stand by your side, celebrate your victories, and support you through every challenge.
+                        From Today To End Of My Life You Have to full Right on Me. 
+                        You are my today and all of my tomorrows
+                    </p>
+                    <p>Happy Birthday jaan ✨
+Tumhari muskaan meri har thakaan mita deti hai, tumhara pyaar meri duniya ko poora bana deta hai. Aaj ke din main bas itna kehna chahta hoon ki tum sirf meri girlfriend nahi, meri strength, meri sukoon aur meri sabse khoobsurat feeling ho.
+
+May this year bring you endless smiles, dreams jo sach ho jaayein, aur woh saari khushiyan jo tum deserve karti ho — aur haan, main hamesha tumhare saath rahunga, har birthday aur har din 💖🎂</p>
+                    <p class="promise-ending">Happy Birthday, Babu. 🎉💕 <br>Love You BaBu</p>
+                </div>
+                <div class="stars-container">
+                    <span class="star">✨</span>
+                    <span class="star">✨</span>
+                    <span class="star">✨</span>
+                    <span class="star">✨</span>
+                    <span class="star">✨</span>
+                    <span class="star">✨</span>
+                    <span class="star">✨</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Audio Controls -->
+    <button id="audioToggleBtn" class="audio-toggle-btn" aria-label="Toggle background music">🔊</button>
+    <audio id="bgMusic" preload="auto" loop playsinline>
+        <source src="assets/audio/Tu Hi Meri Shab Hai.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
